@@ -9,7 +9,7 @@ using namespace std;
 int main(int argc, char* argv[]){
     if (argc != 6)
     {
-        cout<< "Usage : encryptor.exe <encrypt/decrypt> <input> <output> <algorithm> <key>\n";
+        cout<< "Usage : Encryptor.exe <encrypt/decrypt> <input> <output> <algorithm> <key>\n";
         return 1;
     }
     string mode = argv[1];
@@ -28,7 +28,6 @@ int main(int argc, char* argv[]){
             VigenereEncrypt(input,output,key);
         }else if(alg == "feistel")
         {
-            cout << "Running Feistel Encrytp \n";
             FeistelEncrypt(input,output,key);
         }
         else 
@@ -49,7 +48,6 @@ int main(int argc, char* argv[]){
         }
         else if(alg == "feistel")
         {
-            cout << "Running FeistelDecrypt \n";
             FeistelDecrypt(input,output,key);
         }
         else{
